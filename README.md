@@ -32,3 +32,20 @@ The cookbooks `elk-xenial` and `nginx-filebeat` will override the default versio
 
 This is a minimal setup, config files are hard coded and stored in `files/default` directories of the above two cookbooks. They can be
 changed to template files if the need arises.
+
+## Usage
+Reload the nginx page a couple of times to generate logs which will be sent to logstash. Use curl or siege to generate traffic.
+```
+while true
+do
+  curl localhost:8080
+done
+```
+
+Once enough traffic is generated, log to Kibana and go to management and create an index pattern called weblogs-*.
+
+## Cleanup
+Once you're done with testing do
+```
+vagrant destroy -f
+```
