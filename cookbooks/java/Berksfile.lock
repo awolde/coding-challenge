@@ -1,0 +1,11 @@
+DEPENDENCIES
+  java
+    path: .
+    metadata: true
+
+GRAPH
+  homebrew (5.0.8)
+  java (3.2.1)
+    homebrew (>= 0.0.0)
+    windows (>= 0.0.0)
+  windows (5.3.0)
