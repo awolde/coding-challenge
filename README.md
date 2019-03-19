@@ -33,6 +33,8 @@ The cookbooks `elk-xenial` and `nginx-filebeat` will override the default versio
 This is a minimal setup, config files are hard coded and stored in `files/default` directories of the above two cookbooks. They can be
 changed to template files if the need arises.
 
+All the config examples are taken from https://pawelurbanek.com/elk-nginx-logs-setup
+
 ## Usage
 Reload the nginx page a couple of times to generate logs which will be sent to logstash. Use curl or siege to generate traffic.
 ```
